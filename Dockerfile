@@ -35,7 +35,12 @@ RUN /opt/conda/bin/jupyter labextension enable dask-labextension
 # fix permission problems (hub is then failing)
 RUN fix-permissions $HOME
 
+WORKDIR $HOME
+
+RUN cd ~
+
 # Install other packages
 
 
 USER notebook
+

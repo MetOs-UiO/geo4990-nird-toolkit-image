@@ -21,7 +21,6 @@ dependencies:
       - ipykernel
       - scipy
       - jupyterlab
-      - jupyterlab-commenting-service
       - jupyter_contrib_nbextensions
       - dask
       - dask-labextension
