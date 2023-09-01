@@ -1,0 +1,52 @@
+name: base
+
+channels:
+  - conda-forge
+  - bioconda
+  - defaults
+
+dependencies:
+  - pip
+  - pip:
+      - numpy
+      - xarray
+      - pandas
+      - cartopy
+      - matplotlib
+      - seaborn
+      - geopy
+      - basemap
+      - netcdf4
+      - jupyter
+      - ipykernel
+      - scipy
+      - jupyterlab
+      - jupyterlab-commenting-service
+      - jupyter_contrib_nbextensions
+      - dask
+      - dask-labextension
+      - nc-time-axis
+      - xlrd
+      - plotly
+      - requests
+      - nodejs
+      - pythreejs
+      - bqplot
+      - psyplot
+      - psy-maps 
+      - psyplot-gui 
+      - psy-reg 
+      - cdsapi 
+      - basemap-data-hires
+      - cdo
+      - nco
+      - jupytext
+      - pydap
+      - geonum
+      - gcsfs
+      - ecgtools
+      - intake
+      - intake-esm
+      - ipydatawidgets
+      - sidecar
+      - geojsoncontour
