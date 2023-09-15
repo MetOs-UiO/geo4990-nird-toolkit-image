@@ -13,6 +13,8 @@ MAINTAINER Matvey Debolskiy <m.v.debolskiy@geo.uio.no>
 USER root
 RUN apt update && apt install -y vim
 
+RUN apt install -y netcdf-bin
+
 #Install requiraments for python 3
 ADD jupyterhub_environment.yml jupyterhub_environment.yml
 
