@@ -11,7 +11,7 @@ MAINTAINER Matvey Debolskiy <m.v.debolskiy@geo.uio.no>
 
 # Install system packages
 USER root
-RUN apt update && apt install -y vim
+RUN apt update -y && apt install -y vim
 
 #RUN conda install conda=23.7.4
 RUN apt install -y netcdf-bin
@@ -32,7 +32,13 @@ RUN /opt/conda/bin/nbdime extensions --enable
 RUN /opt/conda/bin/jupyter labextension enable jupytext
 RUN /opt/conda/bin/jupyter labextension enable dask-labextension
 
+RUN conda init bash
 
+RUN eval $(conda shell.bash hook)
+
+RUN echo "source activate base" > $HOME/.bashrc
+ENV PATH /opt/conda/envs/env/bin:$PATH
+ENV ESMFMKFILE=/opt/conda/lib/esmf.mk
 #RUN git clone https://github.com/ESCOMP/CTSM.git
 
 

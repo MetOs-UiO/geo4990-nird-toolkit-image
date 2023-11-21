@@ -7,11 +7,15 @@ channels:
 
 dependencies:
   - python == 3.11.4
+  - xesmf
+  - ipykernel
+  - ipywidgets
+  - nb_conda_kernels
+  - pytest
+  - gsw
+  - cmcrameri
   - pip
   - pip:
-      - numpy
-      - xarray
-      - pandas
       - cartopy
       - matplotlib
       - seaborn
@@ -19,7 +23,6 @@ dependencies:
       - basemap
       - netcdf4
       - jupyter
-      - ipykernel
       - scipy
       - jupyterlab
       - jupyter_contrib_nbextensions
