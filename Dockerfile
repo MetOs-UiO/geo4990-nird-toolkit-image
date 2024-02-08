@@ -31,7 +31,6 @@ RUN /opt/conda/bin/nbdime extensions --enable
 #RUN /opt/conda/bin/jupyter labextension install @jupyter-widgets/jupyterlab-sidecar
 RUN /opt/conda/bin/jupyter labextension enable jupytext
 RUN /opt/conda/bin/jupyter labextension enable dask-labextension
-
 RUN conda init bash
 
 RUN eval $(conda shell.bash hook)

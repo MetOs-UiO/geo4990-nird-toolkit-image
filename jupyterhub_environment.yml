@@ -24,7 +24,11 @@ dependencies:
       - netcdf4
       - jupyter
       - scipy
+      - pexpect >=4.9
       - jupyterlab
+      - jupyterlab-git
+      - nbgitpuller
+      - jupyterlab-github
       - jupyter_contrib_nbextensions
       - dask
       - dask-labextension
@@ -46,6 +50,7 @@ dependencies:
       - jupytext
       - pydap
       - geonum
+      - s3fs
       - gcsfs
       - ecgtools
       - intake
