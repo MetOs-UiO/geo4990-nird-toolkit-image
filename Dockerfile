@@ -40,7 +40,7 @@ ENV PATH /opt/conda/envs/env/bin:$PATH
 ENV ESMFMKFILE=/opt/conda/lib/esmf.mk
 #RUN git clone https://github.com/ESCOMP/CTSM.git
 
-##
+
 
 # fix permission problems (hub is then failing)
 RUN fix-permissions $HOME
