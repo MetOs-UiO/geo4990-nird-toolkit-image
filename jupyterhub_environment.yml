@@ -27,6 +27,8 @@ dependencies:
       - pexpect >=4.9
       - jupyterlab
       - jupyterlab-git
+      - notebook
+      - ipyparallel
       - nbgitpuller
       - jupyterlab-github
       - jupyter_contrib_nbextensions

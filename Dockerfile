@@ -23,6 +23,8 @@ ADD jupyterhub_environment.yml jupyterhub_environment.yml
 
 RUN set -o pipefail
 
+RUN conda update conda --yes
+
 RUN conda env update -f jupyterhub_environment.yml
 
 RUN /opt/conda/bin/jupyter labextension install @jupyterlab/hub-extension @jupyter-widgets/jupyterlab-manager
