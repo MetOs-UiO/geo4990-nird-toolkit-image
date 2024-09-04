@@ -6,7 +6,7 @@ channels:
   - defaults
 
 dependencies:
-  - python == 3.11.4
+  - python == 3.11.8
   - xesmf
   - ipykernel
   - ipywidgets
@@ -32,6 +32,7 @@ dependencies:
       - nbgitpuller
       - jupyterlab-github
       - jupyter_contrib_nbextensions
+      - jupyter-resource-usage
       - dask
       - dask-labextension
       - nc-time-axis
