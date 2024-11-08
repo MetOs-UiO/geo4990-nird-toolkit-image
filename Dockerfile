@@ -77,6 +77,11 @@ RUN mamba install -y -n labs \
     'ipympl' && \
     mamba clean --all -f -y
 
+RUN bash -c "mamba run -n labs python -m pip install pyet"
+
+RUN bash -c "mamba run -n labs python -m pip install --no-deps climate-indices"
+
+RUN mamba clean --all -f -y
 
 RUN python -m nb_conda_kernels list
 
