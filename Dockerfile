@@ -74,7 +74,8 @@ RUN mamba install -y -n labs \
     'geocat-viz' \
     'gcc_linux-64' 'gxx_linux-64' \
     'assimulo' \
-    'ipympl' && \
+    'ipympl' \
+    'xclim' && \
     mamba clean --all -f -y
 
 RUN bash -c "mamba run -n labs python -m pip install pyet"
