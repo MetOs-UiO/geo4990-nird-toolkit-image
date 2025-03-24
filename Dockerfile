@@ -5,9 +5,9 @@
 # to determine the latest base image
 
 # The image to use as a base image
-FROM sigma2as/jupyterhub-singleuser:20240301-21d3e39 as sigma2
+FROM sigma2as/jupyterhub-singleuser:20240301-21d3e39 AS sigma2
 
-MAINTAINER Matvey Debolskiy <m.v.debolskiy@geo.uio.no>
+#MAINTAINER Matvey Debolskiy <m.v.debolskiy@geo.uio.no>
 
 
 RUN mamba config --set channel_priority strict && \
@@ -72,6 +72,8 @@ RUN mamba install -y -n labs \
     'threddsclient' \
     'plotly' \
     'geocat-viz' \
+    'geocat-comp' \
+    'geocat-f2py' \
     'gcc_linux-64' 'gxx_linux-64' \
     'assimulo' \
     'ipympl' \
@@ -97,7 +99,7 @@ RUN python -m nb_conda_kernels list
 RUN eval $(conda shell.bash hook)
 
 #RUN echo "source activate base" > $HOME/.bashrc
-ENV PATH /opt/conda/envs/env/bin:$PATH
+ENV PATH=/opt/conda/envs/env/bin:$PATH
 ENV ESMFMKFILE=/opt/conda/lib/esmf.mk
 
 
